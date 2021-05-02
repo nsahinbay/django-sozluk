@@ -1,8 +1,15 @@
+import os
+from dotenv import load_dotenv
+from pathlib import Path
+
 from decimal import Decimal
 
 from django.apps import AppConfig
 from django.utils.translation import gettext_lazy as _
 
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+load_dotenv(os.path.join(BASE_DIR, '.env'))
 
 # pylint: disable=C0415,W0611
 class DictionaryConfig(AppConfig):
@@ -14,9 +21,9 @@ class DictionaryConfig(AppConfig):
 
     # Settings
 
-    DOMAIN = "xyzsozluk.com"
-    PROTOCOL = "http"
-    FROM_EMAIL = "noreply@xyzsozluk.org"
+    DOMAIN = os.environ.get("DOMAIN") # xyz.com
+    PROTOCOL = os.environ.get("PROTOCOL") # http
+    FROM_EMAIL = os.environ.get("FROM_EMAIL") # info@xyz.com
 
     # Default options for content object counts
     TOPICS_PER_PAGE_DEFAULT = 50  # For guests only
