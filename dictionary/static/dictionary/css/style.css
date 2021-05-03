@@ -1,8 +1,8 @@
 :root {
-    --primary: #092e20;
-    --primary-dark: #0d2f18;
-    --primary-light: #16784f;
-    --primary-light-matt: #16784f;
+    --primary: #f3c309;
+    --primary-dark: #ffcc00;
+    --primary-light: #f3c409;
+    --primary-light-matt: #af8f10;
     --light-0-invert: #242526;
     --light-0: #fff;
     --light-1: #e3e3e3;
@@ -25,11 +25,11 @@
 }
 
 body.dark {
-    --primary: rgba(43, 255, 166, .75);
-    --primary-dark: rgba(43, 255, 166, .67);
-    --primary-light: var(--primary);
-    --primary-light-matt: rgba(43, 255, 166, 1);
-    --primary-light-white-fore: rgba(43, 255, 166, .43);
+    --primary: #f3c309;
+    --primary-dark: #ffcc00;
+    --primary-light: #f3c309;
+    --primary-light-matt: #f3c309;
+    --primary-light-white-fore: #f3c309;
     --light-0-invert: #fff;
     --light-0: #242526;
     --light-1: #272727;

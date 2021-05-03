@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # Django built-in
-    "django.contrib.postgres",  # Not required if you don't use PostgreSQL.
+    #"django.contrib.postgres",  # Not required if you don't use PostgreSQL.
     "django.contrib.humanize",
     "django.contrib.sites",
     "django.contrib.flatpages",
