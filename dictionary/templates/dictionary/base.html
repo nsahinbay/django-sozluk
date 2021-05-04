@@ -8,6 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="{% block description %}{% endblock %}" />
     {% block metatags %}{% endblock %}
+    {# Facebook #}
+    <meta property="og:image" content="{% static "dictionary/img/logo_share.png" %}">
+    {# Twitter #}
+    <meta name="twitter:image" content="{% static "dictionary/img/logo_share.png" %}">
+    <meta name="twitter:card" content="summary">
 
     {# In production, some static files should be served together. #}
     <link rel="shortcut icon" type="image/png" href="{% static 'dictionary/img/favicon.ico' %}"/>
