@@ -166,7 +166,6 @@
                 {% render_header_link "today" %}
                 {% render_header_link "popular" %}
                 {% render_header_link "top" %}
-                {% render_header_link "today-in-history" %}
                 {% render_header_link "acquaintances" %}
 
                 {% if user.is_authenticated %}
@@ -257,7 +256,6 @@
                 {% render_header_link 'followups' %}
                 {% render_header_link 'wishes' %}
                 {% render_header_link 'novices' %}
-                {% render_header_link 'today-in-history' %}
 
                 {% for category in nav_categories|slice:":4" %}
                     <li {% if left_frame.slug == category.slug %}class="active"{% endif %} data-lf-slug="{{ category.slug }}">
