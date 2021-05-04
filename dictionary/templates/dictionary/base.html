@@ -410,6 +410,8 @@
     </ul>
 {% endspaceless %}
 <div class="toast-holder" aria-live="polite"></div>
-
+{% block ga %}
+    {% include "dictionary/includes/ga.html" %}
+{% endblock ga %}
 </body>
 </html>
