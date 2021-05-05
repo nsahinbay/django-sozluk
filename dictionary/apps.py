@@ -30,12 +30,12 @@ class DictionaryConfig(AppConfig):
     ENTRIES_PER_PAGE_DEFAULT = 10  # For guests only
     ENTRIES_PER_PAGE_PROFILE = 15  # Global setting
 
-    GENERIC_SUPERUSER_USERNAME = "djangosozluk"
+    GENERIC_SUPERUSER_USERNAME = os.environ.get("GENERIC_SUPERUSER_USERNAME")
     """
     Give the username of the user who does administrative actions in the site.
     """
 
-    GENERIC_PRIVATEUSER_USERNAME = "anonymous"
+    GENERIC_PRIVATEUSER_USERNAME = os.environ.get("GENERIC_PRIVATEUSER_USERNAME")
     """
     Create an anonymous user with is_private=True and is_novice=False.
     This anonymous user is used to hold the entries of deleted accounts.
@@ -211,7 +211,7 @@ class DictionaryConfig(AppConfig):
     You may also (better) use this for debugging purposes.
     """
 
-    YEAR_RANGE = (2020, 2019, 2018)
+    YEAR_RANGE = (2020)
     """Years available for today-in-history"""
 
     #  <-----> END OF CATEGORY RELATED SETTINGS <----->  #
@@ -232,7 +232,7 @@ class DictionaryConfig(AppConfig):
     GENERATION_GAP_DAYS = 180
     """Set the interval for seperating generations."""
 
-    DISABLE_ANONYMOUS_VOTING = False
+    DISABLE_ANONYMOUS_VOTING = True
     """
     Set this to True to disallow anonymous votes.
     Vote section will be visible to guests but they
